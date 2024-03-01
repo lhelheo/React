@@ -1,0 +1,129 @@
+/* Adiciona @tailwind directives para cada cada do Tailwind para o arquivo css principal*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Arquivo css com cada definição de tamanho, proporção e palheta de cores condizentes para garantir uma boa experiência para o usuário
+Tive um problema na hora de conseguir deixar o body com a sintaxe do tailwindcss então deixei como css padrão, mas ele está funcional e todo o resto já está em TailWind
+*/
+body{
+  font-family: "jakarta", sans-serif;
+}
+
+@layer components {
+  .font-jakarta {
+    font-family: jakarta, sans-serif;
+  }
+}
+
+@media (max-width: 531px) {
+  div > h1 {
+    @apply text-2xl pb-3 text-[#00666C];
+  }
+  button {
+    @apply m-1;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  div > h1 {
+    @apply text-3xl pb-5 text-[#00666C];
+  }
+  button {
+    @apply mx-2;
+  }
+}
+
+.app {
+  @apply max-w-3xl mx-auto mb-32 bg-gray-200 px-8 py-6 rounded-lg;
+}
+
+div > h1{
+  @apply text-3xl font-bold text-[#00666C];
+}
+
+
+h1 {
+  @apply text-center;
+}
+
+h2 {
+  @apply mb-4;
+}
+
+p {
+  @apply my-4;
+}
+
+input{
+  @apply box-border;
+}
+
+button {
+  @apply bg-[#00666C] text-white px-2 py-1 rounded-md cursor-pointer opacity-80 mr-4 transition duration-300;
+}
+
+button:hover {
+  @apply opacity-100;
+}
+
+.todo-list {
+  @apply mb-5 pb-5 border-b-2 border-gray-300;
+}
+
+.complete {
+  @apply bg-green-500 text-white px-4 py-2 rounded-md cursor-pointer opacity-80 mr-4 transition duration-300;
+}
+
+.remove {
+  @apply bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer opacity-80 transition duration-300;
+}
+
+.complete:hover,
+.remove:hover {
+  @apply opacity-100;
+}
+
+input,
+select {
+  @apply p-1 mb-5 border border-gray-300 rounded w-full;
+}
+
+.todo {
+  @apply bg-gray-200 shadow-md p-4 mb-4 
+  rounded flex justify-between items-center;
+}
+
+.filter,
+.search {
+  @apply border-b-2 border-gray-300 mb-5 pb-5;
+}
+
+.filter-options {
+  @apply flex justify-between gap-12;
+}
+
+.filter-options > div {
+  @apply flex-1;
+}
+
+.content > p {
+  @apply font-bold;
+}
+
+.todo .status {
+  @apply italic font-light;
+}
+
+.display-options {
+  @apply flex items-center;
+}
+
+@font-face {
+  font-family: jakarta;
+  src: url(../public/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+.ultra {
+  @apply font-jakarta;
+}
