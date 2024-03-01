@@ -1,26 +1,3 @@
-/*
-O componente Todoform é responsável por fornecer um formulário onde o usuário pode inserir o título e o 
-status de uma nova tarefa. Quando o formulário é enviado, a função addTodo é chamada para adicionar a 
-tarefa à lista existente.
-
-Estado Local:
-const [title, setTitle] = useState(""): Define um estado local title para armazenar o título da tarefa. O useState inicializa o estado com uma string vazia.
-const [status, setStatus] = useState(""): Define um estado local status para armazenar o status da tarefa. Também é inicializado com uma string vazia.
-
-Função de Submissão:
-const submit = (e) => { ... }: Define a função de submissão do formulário. Ela é chamada quando o formulário é enviado.
-e.preventDefault(): Realiza a prevenção do comportamento padrão de envio do formulário, que seria recarregar a página.
-if (!title || !status) return;: Verifica se tanto o título quanto o status foram preenchidos. Se algum deles estiver vazio, a função retorna sem fazer nada.
-addTodo(title, status): Chama a função addTodo recebida como propriedade, passando o título e o status da nova tarefa como argumentos.
-setTitle("") e setStatus(""): Limpa os estados title e status, redefinindo-os como strings vazias após a submissão do formulário para auxiliar em um próxima submissão.
-
-Renderização do Formulário:
-O formulário é renderizado com um campo de entrada (input) para o título da tarefa e um seletor (select) para o status.
-Os valores dos campos são vinculados aos estados locais title e status, garantindo que sejam atualizados conforme o usuário interage com o formulário.
-Quando o usuário digita no campo de entrada ou seleciona uma opção no seletor, os estados title e status são atualizados com os valores correspondentes.
-Ao enviar o formulário, a função submit é chamada, desencadeando o processo de criação de uma nova tarefa.
-*/
-
 import { useState } from "react";
 
 const Todoform = ({addTodo}) => {

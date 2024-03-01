@@ -1,11 +1,7 @@
-/* Adiciona @tailwind directives para cada cada do Tailwind para o arquivo css principal*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Arquivo css com cada definição de tamanho, proporção e palheta de cores condizentes para garantir uma boa experiência para o usuário
-Tive um problema na hora de conseguir deixar o body com a sintaxe do tailwindcss então deixei como css padrão, mas ele está funcional e todo o resto já está em TailWind
-*/
 body{
   font-family: "jakarta", sans-serif;
 }
